@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0l5srarwbhtw"]
+
+[ext_resource type="PackedScene" uid="uid://de5ikemt1qdq3" path="res://Asset/Laberinto1.fbx" id="1_tgwbd"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Laberinto1" parent="." instance=ExtResource("1_tgwbd")]

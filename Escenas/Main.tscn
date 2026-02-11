@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://i2mw2gcsjf73"]
+
+[ext_resource type="PackedScene" uid="uid://de5ikemt1qdq3" path="res://Asset/Laberinto1.fbx" id="1_de8wb"]
+[ext_resource type="PackedScene" uid="uid://dlwbr6pyfo4k6" path="res://Escenas/Player.tscn" id="2_rh6kf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_10k8k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2u8cc"]
+
+[node name="Laberinto1" unique_id=1409229352 instance=ExtResource("1_de8wb")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LabPro" index="0" unique_id=1965152488]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=1027716743]
+transform = Transform3D(3.50357, 0, 0, 0, 0.0532138, 0, 0, 0, 3.57811, -0.0831971, -0.0259198, 0.420911)
+mesh = SubResource("BoxMesh_10k8k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" index="0" unique_id=251253431]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" index="0" unique_id=1009001483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00230268, 0.237407, -0.0052136)
+shape = SubResource("BoxShape3D_2u8cc")
+
+[node name="CharacterBody3D" parent="." index="2" unique_id=1912264978 instance=ExtResource("2_rh6kf")]
+transform = Transform3D(-0.00603692, 0, -0.0998176, 0, 0.1, 0, 0.0998176, 0, -0.00603692, -1.11069, 0.160145, 0.156211)
+
+[node name="Camera3D" type="Camera3D" parent="." index="3" unique_id=1948532172]
+transform = Transform3D(0.704813, -0.411471, 0.577867, -0.0275202, 0.798121, 0.601869, -0.708859, -0.440108, 0.551202, 1.99847, 2.17933, 2.37474)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" index="0" unique_id=716590245]
